@@ -18,6 +18,35 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            var car1 = new Car();
+            car1.Year = 2016;
+            car1.Make = "Dodge";
+            car1.Model = "Charger";
+            car1.EngineNoise = "vroom";
+            car1.HonkNoise = "beep";
+            car1.IsDriveable = true;
+
+            var car2 = new Car()
+            {
+                Year = 2010,
+                Make = "Ford",
+                Model = "Fusion",
+                EngineNoise = "vroooooom",
+                HonkNoise = "bleep",
+                IsDriveable = true,
+            };
+
+            var car3 = new Car(2020, "Toyota", "Camry", "Vroom", "Beep", true);
+
+            car1.MakeEngineNoise(car1.EngineNoise);
+            car2.MakeEngineNoise(car2.EngineNoise);
+            car3.MakeEngineNoise(car3.EngineNoise);
+
+            car1.MakeHonkNoise(car1.HonkNoise);
+            car2.MakeHonkNoise(car2.HonkNoise);
+            car3.MakeHonkNoise(car3.HonkNoise);
+
+
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
